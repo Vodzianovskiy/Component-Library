@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="/components/modal-auth/img/v4.jpg"
+    />
+    <title>Dark Mode Auth - Variant 4</title>
+    <link rel="stylesheet" href="/components/modal-auth/variant-4/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Particles Background -->
+    <div class="particles">
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+    </div>
+
+    <!-- Back Button -->
+    <a href="/components/modal-auth/modal-auth.html" class="back-btn">
+      <i class="fas fa-arrow-left"></i>
+      <span>Back</span>
+    </a>
+
+    <!-- Main Container -->
+    <div class="dark-container">
+      <!-- Header -->
+      <div class="dark-header">
+        <div class="logo-dark">
+          <i class="fas fa-moon"></i>
+          <div class="logo-glow"></div>
+        </div>
+        <h1 class="dark-title">Dark Portal</h1>
+        <p class="dark-subtitle">Professional Dark Mode Authentication</p>
+      </div>
+
+      <!-- Mode Switch -->
+      <div class="mode-switch">
+        <button class="switch-btn active" data-mode="login">
+          <i class="fas fa-right-to-bracket"></i>
+          Login
+        </button>
+        <button class="switch-btn" data-mode="register">
+          <i class="fas fa-user-plus"></i>
+          Register
+        </button>
+      </div>
+
+      <!-- Login Form -->
+      <form id="loginForm" class="dark-form active">
+        <div class="input-field">
+          <div class="field-icon">
+            <i class="fas fa-envelope"></i>
+          </div>
+          <input
+            type="email"
+            id="loginEmail"
+            placeholder="Email Address"
+            required
+          />
+          <div class="field-border"></div>
+        </div>
+        <span class="field-error" data-error="loginEmail"></span>
+
+        <div class="input-field">
+          <div class="field-icon">
+            <i class="fas fa-lock"></i>
+          </div>
+          <input
+            type="password"
+            id="loginPassword"
+            placeholder="Password"
+            required
+          />
+          <button
+            type="button"
+            class="password-toggle"
+            data-target="loginPassword"
+          >
+            <i class="fas fa-eye"></i>
+          </button>
+          <div class="field-border"></div>
+        </div>
+        <div class="caps-indicator" id="loginCapsIndicator">
+          <i class="fas fa-keyboard"></i>
+          Caps Lock is ON
+        </div>
+        <span class="field-error" data-error="loginPassword"></span>
+
+        <div class="form-controls">
+          <label class="dark-check">
+            <input type="checkbox" id="rememberLogin" />
+            <span class="check-mark"></span>
+            <span class="check-label">Remember me</span>
+          </label>
+          <a href="#" class="dark-link">Forgot Password?</a>
+        </div>
+
+        <button type="submit" class="dark-button">
+          <span class="button-text">Sign In</span>
+          <span class="button-loader"></span>
+          <i class="fas fa-arrow-right button-arrow"></i>
+        </button>
+      </form>
+
+      <!-- Register Form -->
+      <form id="registerForm" class="dark-form">
+        <div class="input-grid">
+          <div class="input-field">
+            <div class="field-icon">
+              <i class="fas fa-user"></i>
+            </div>
+            <input
+              type="text"
+              id="firstName"
+              placeholder="First Name"
+              required
+            />
+            <div class="field-border"></div>
+          </div>
+
+          <div class="input-field">
+            <div class="field-icon">
+              <i class="fas fa-user"></i>
+            </div>
+            <input type="text" id="lastName" placeholder="Last Name" required />
+            <div class="field-border"></div>
+          </div>
+        </div>
+
+        <div class="input-field">
+          <div class="field-icon">
+            <i class="fas fa-envelope"></i>
+          </div>
+          <input
+            type="email"
+            id="registerEmail"
+            placeholder="Email Address"
+            required
+          />
+          <div class="field-border"></div>
+        </div>
+        <span class="field-error" data-error="registerEmail"></span>
+
+        <div class="input-field">
+          <div class="field-icon">
+            <i class="fas fa-key"></i>
+          </div>
+          <input
+            type="password"
+            id="registerPassword"
+            placeholder="Create Password"
+            required
+          />
+          <button
+            type="button"
+            class="password-toggle"
+            data-target="registerPassword"
+          >
+            <i class="fas fa-eye"></i>
+          </button>
+          <div class="field-border"></div>
+        </div>
+        <div class="caps-indicator" id="registerCapsIndicator">
+          <i class="fas fa-keyboard"></i>
+          Caps Lock is ON
+        </div>
+
+        <!-- Password Strength -->
+        <div class="strength-indicator">
+          <div class="strength-bar">
+            <div class="strength-progress" id="strengthProgress"></div>
+          </div>
+          <div class="strength-info">
+            <span class="strength-label" id="strengthLabel"
+              >Password Strength</span
+            >
+            <span class="strength-percentage" id="strengthPercentage">0%</span>
+          </div>
+        </div>
+
+        <div class="input-field">
+          <div class="field-icon">
+            <i class="fas fa-check-double"></i>
+          </div>
+          <input
+            type="password"
+            id="confirmPassword"
+            placeholder="Confirm Password"
+            required
+          />
+          <button
+            type="button"
+            class="password-toggle"
+            data-target="confirmPassword"
+          >
+            <i class="fas fa-eye"></i>
+          </button>
+          <div class="field-border"></div>
+        </div>
+        <span class="field-error" data-error="confirmPassword"></span>
+
+        <label class="dark-check terms">
+          <input type="checkbox" id="agreeTerms" required />
+          <span class="check-mark"></span>
+          <span class="check-label">
+            I agree to <a href="#" class="dark-link">Terms & Conditions</a>
+          </span>
+        </label>
+
+        <button type="submit" class="dark-button">
+          <span class="button-text">Create Account</span>
+          <span class="button-loader"></span>
+          <i class="fas fa-arrow-right button-arrow"></i>
+        </button>
+      </form>
+    </div>
+
+    <!-- Success Modal -->
+    <div class="success-backdrop" id="successBackdrop">
+      <div class="success-modal">
+        <div class="success-checkmark">
+          <i class="fas fa-check"></i>
+        </div>
+        <h2 id="successTitle">Success!</h2>
+        <p id="successMsg">Your action was completed successfully.</p>
+        <button class="dark-button" id="closeSuccess">
+          <span class="button-text">Continue</span>
+          <i class="fas fa-arrow-right button-arrow"></i>
+        </button>
+      </div>
+    </div>
+
+    <script src="/components/modal-auth/variant-4/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="/components/toast-notifications/img/v3.jpg"
+    />
+    <title>Minimal Dark Toast Notifications 🌙</title>
+    <link rel="stylesheet" href="variant-3.css" />
+  </head>
+  <body>
+    <!-- Back Button -->
+    <a href="../toast-notifications.html" class="back-button">
+      <svg
+        class="back-icon"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+      >
+        <path d="M19 12H5M12 19l-7-7 7-7" />
+      </svg>
+      <span>Back</span>
+    </a>
+
+    <div class="container">
+      <header class="header">
+        <h1 class="title">🌙 Minimal Dark Toasts</h1>
+        <p class="subtitle">Clean minimalist design with subtle elegance</p>
+      </header>
+
+      <div class="demo-section">
+        <h2 class="section-title">Launch Notifications</h2>
+
+        <div class="button-grid">
+          <button class="demo-btn success" data-type="success">
+            <span class="btn-icon">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+              >
+                <path d="M20 6L9 17l-5-5" />
+              </svg>
+            </span>
+            <span>Success</span>
+          </button>
+
+          <button class="demo-btn error" data-type="error">
+            <span class="btn-icon">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+              >
+                <path d="M18 6L6 18M6 6l12 12" />
+              </svg>
+            </span>
+            <span>Error</span>
+          </button>
+
+          <button class="demo-btn warning" data-type="warning">
+            <span class="btn-icon">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+              >
+                <path d="M12 9v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </span>
+            <span>Warning</span>
+          </button>
+
+          <button class="demo-btn info" data-type="info">
+            <span class="btn-icon">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+              >
+                <path
+                  d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                />
+              </svg>
+            </span>
+            <span>Info</span>
+          </button>
+        </div>
+
+        <div class="controls">
+          <button class="control-btn primary" id="showAll">
+            <span>Show All Types</span>
+          </button>
+          <button class="control-btn secondary" id="clearAll">
+            <span>Clear All</span>
+          </button>
+          <button class="control-btn tertiary" id="randomToast">
+            <span>Random Toast</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path
+                d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"
+              />
+            </svg>
+          </div>
+          <h3>Minimalist Design</h3>
+          <p>Clean and distraction-free</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path d="M13 10V3L4 14h7v7l9-11h-7z" />
+            </svg>
+          </div>
+          <h3>Lightning Fast</h3>
+          <p>Optimized performance</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path
+                d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707"
+              />
+            </svg>
+          </div>
+          <h3>Dark Mode</h3>
+          <p>Easy on the eyes</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Toast Container -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <script src="variant-3.js"></script>
+  </body>
+</html>

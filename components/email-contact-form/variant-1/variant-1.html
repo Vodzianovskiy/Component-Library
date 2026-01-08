@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="/components/email-contact-form/img/v1.jpg"
+    />
+    <title>Contact Form - Variant 1</title>
+    <link rel="stylesheet" href="variant-1.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="form-wrapper">
+        <!-- Back Button -->
+        <a href="../email-contact-form.html" class="back-btn">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <line x1="19" y1="12" x2="5" y2="12"></line>
+            <polyline points="12 19 5 12 12 5"></polyline>
+          </svg>
+          Back
+        </a>
+
+        <h1 class="form-title">Get in Touch</h1>
+        <p class="form-subtitle">We'll respond within 24 hours</p>
+
+        <form id="contactForm" class="contact-form" novalidate>
+          <div class="form-group">
+            <label for="name">Name *</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              required
+              minlength="2"
+              maxlength="50"
+              autocomplete="name"
+              placeholder="John Doe"
+            />
+            <span class="error-message"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email *</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              maxlength="100"
+              autocomplete="email"
+              placeholder="john@example.com"
+            />
+            <span class="error-message"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input
+              type="text"
+              id="subject"
+              name="subject"
+              maxlength="100"
+              placeholder="What's this about?"
+            />
+            <span class="error-message"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message *</label>
+            <textarea
+              id="message"
+              name="message"
+              required
+              minlength="10"
+              maxlength="1000"
+              rows="5"
+              placeholder="Write your message here..."
+            ></textarea>
+            <span class="char-counter">0 / 1000</span>
+            <span class="error-message"></span>
+          </div>
+
+          <button type="submit" class="submit-btn">
+            <span class="btn-text">Send Message</span>
+            <span class="btn-loader"></span>
+          </button>
+
+          <div class="form-status"></div>
+        </form>
+      </div>
+    </div>
+
+    <script src="variant-1.js"></script>
+  </body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="/components/toast-notifications/img/v2.jpg"
+    />
+    <title>Gradient Pop Toast Notifications 🎨</title>
+    <link rel="stylesheet" href="variant-2.css" />
+  </head>
+  <body>
+    <!-- Back Button -->
+    <a href="../toast-notifications.html" class="back-button">
+      <svg
+        class="back-icon"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+      >
+        <path d="M19 12H5M12 19l-7-7 7-7" />
+      </svg>
+      <span>Back</span>
+    </a>
+
+    <div class="container">
+      <header class="header">
+        <h1 class="title">🎨 Gradient Pop Toasts</h1>
+        <p class="subtitle">Vibrant gradients with eye-catching animations</p>
+      </header>
+
+      <div class="demo-section">
+        <h2 class="section-title">Launch Notifications</h2>
+
+        <div class="button-grid">
+          <button class="demo-btn success-gradient" data-type="success">
+            <span class="btn-glow"></span>
+            <span class="btn-content">
+              <span class="btn-icon">🎉</span>
+              <span>Success</span>
+            </span>
+          </button>
+
+          <button class="demo-btn error-gradient" data-type="error">
+            <span class="btn-glow"></span>
+            <span class="btn-content">
+              <span class="btn-icon">🔥</span>
+              <span>Error</span>
+            </span>
+          </button>
+
+          <button class="demo-btn warning-gradient" data-type="warning">
+            <span class="btn-glow"></span>
+            <span class="btn-content">
+              <span class="btn-icon">⚡</span>
+              <span>Warning</span>
+            </span>
+          </button>
+
+          <button class="demo-btn info-gradient" data-type="info">
+            <span class="btn-glow"></span>
+            <span class="btn-content">
+              <span class="btn-icon">💡</span>
+              <span>Info</span>
+            </span>
+          </button>
+        </div>
+
+        <div class="controls">
+          <button class="control-btn primary" id="showAll">
+            <span>🚀 Show All</span>
+          </button>
+          <button class="control-btn secondary" id="clearAll">
+            <span>🗑️ Clear All</span>
+          </button>
+          <button class="control-btn tertiary" id="randomToast">
+            <span>🎲 Random Toast</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">✨</div>
+          <h3>Vibrant Gradients</h3>
+          <p>Eye-catching color combinations</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🎬</div>
+          <h3>Smooth Animations</h3>
+          <p>Fluid slide and bounce effects</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">⚡</div>
+          <h3>Fast & Light</h3>
+          <p>Optimized performance</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Toast Container -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <script src="variant-2.js"></script>
+  </body>
+</html>

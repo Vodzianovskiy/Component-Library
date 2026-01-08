@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="/components/modal-auth/img/v2.jpg"
+    />
+    <title>Glassmorphism Auth - Variant 2</title>
+    <link rel="stylesheet" href="/components/modal-auth/variant-2/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Animated Background -->
+    <div class="animated-bg">
+      <div class="gradient-orb orb-1"></div>
+      <div class="gradient-orb orb-2"></div>
+      <div class="gradient-orb orb-3"></div>
+    </div>
+
+    <!-- Back Button -->
+    <a href="/components/modal-auth/modal-auth.html" class="back-btn">
+      <i class="fas fa-arrow-left"></i>
+      <span>Back</span>
+    </a>
+
+    <!-- Main Glass Container -->
+    <div class="glass-container">
+      <div class="glass-card">
+        <!-- Logo & Title -->
+        <div class="auth-header">
+          <div class="logo-glass">
+            <i class="fas fa-shield-halved"></i>
+          </div>
+          <h1 class="glass-title">Secure Access</h1>
+          <p class="glass-subtitle">Glassmorphism Authentication Portal</p>
+        </div>
+
+        <!-- Mode Toggle -->
+        <div class="mode-toggle">
+          <button class="mode-btn active" data-mode="login">
+            <i class="fas fa-right-to-bracket"></i>
+            <span>Login</span>
+          </button>
+          <button class="mode-btn" data-mode="register">
+            <i class="fas fa-user-plus"></i>
+            <span>Register</span>
+          </button>
+          <div class="toggle-slider"></div>
+        </div>
+
+        <!-- Login Form -->
+        <form id="loginForm" class="auth-form active">
+          <div class="input-group">
+            <div class="input-icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <div class="input-wrapper">
+              <input
+                type="email"
+                id="loginEmail"
+                class="glass-input"
+                placeholder=" "
+                required
+              />
+              <label class="floating-label">Email Address</label>
+            </div>
+          </div>
+          <span class="error-msg" data-error="loginEmail"></span>
+
+          <div class="input-group">
+            <div class="input-icon">
+              <i class="fas fa-lock"></i>
+            </div>
+            <div class="input-wrapper">
+              <input
+                type="password"
+                id="loginPassword"
+                class="glass-input"
+                placeholder=" "
+                required
+              />
+              <label class="floating-label">Password</label>
+              <button
+                type="button"
+                class="eye-toggle"
+                data-target="loginPassword"
+              >
+                <i class="fas fa-eye"></i>
+              </button>
+            </div>
+          </div>
+          <div class="caps-alert" id="loginCaps">
+            <i class="fas fa-keyboard"></i> Caps Lock is ON
+          </div>
+          <span class="error-msg" data-error="loginPassword"></span>
+
+          <div class="form-footer">
+            <label class="glass-checkbox">
+              <input type="checkbox" id="rememberLogin" />
+              <span class="checkbox-custom"></span>
+              <span class="checkbox-label">Remember me</span>
+            </label>
+            <a href="#" class="forgot-pass">Forgot?</a>
+          </div>
+
+          <button type="submit" class="glass-submit">
+            <span class="submit-text">Sign In</span>
+            <span class="submit-loader"></span>
+            <i class="fas fa-arrow-right submit-icon"></i>
+          </button>
+        </form>
+
+        <!-- Register Form -->
+        <form id="registerForm" class="auth-form">
+          <div class="input-row">
+            <div class="input-group half">
+              <div class="input-icon">
+                <i class="fas fa-user"></i>
+              </div>
+              <div class="input-wrapper">
+                <input
+                  type="text"
+                  id="firstName"
+                  class="glass-input"
+                  placeholder=" "
+                  required
+                />
+                <label class="floating-label">First Name</label>
+              </div>
+            </div>
+
+            <div class="input-group half">
+              <div class="input-icon">
+                <i class="fas fa-user"></i>
+              </div>
+              <div class="input-wrapper">
+                <input
+                  type="text"
+                  id="lastName"
+                  class="glass-input"
+                  placeholder=" "
+                  required
+                />
+                <label class="floating-label">Last Name</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="input-group">
+            <div class="input-icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <div class="input-wrapper">
+              <input
+                type="email"
+                id="registerEmail"
+                class="glass-input"
+                placeholder=" "
+                required
+              />
+              <label class="floating-label">Email Address</label>
+            </div>
+          </div>
+          <span class="error-msg" data-error="registerEmail"></span>
+
+          <div class="input-group">
+            <div class="input-icon">
+              <i class="fas fa-key"></i>
+            </div>
+            <div class="input-wrapper">
+              <input
+                type="password"
+                id="registerPassword"
+                class="glass-input"
+                placeholder=" "
+                required
+              />
+              <label class="floating-label">Create Password</label>
+              <button
+                type="button"
+                class="eye-toggle"
+                data-target="registerPassword"
+              >
+                <i class="fas fa-eye"></i>
+              </button>
+            </div>
+          </div>
+          <div class="caps-alert" id="registerCaps">
+            <i class="fas fa-keyboard"></i> Caps Lock is ON
+          </div>
+
+          <!-- Password Strength -->
+          <div class="strength-meter">
+            <div class="strength-bars">
+              <div class="strength-bar"></div>
+              <div class="strength-bar"></div>
+              <div class="strength-bar"></div>
+              <div class="strength-bar"></div>
+            </div>
+            <span class="strength-label" id="strengthLabel"
+              >Enter password</span
+            >
+          </div>
+
+          <div class="input-group">
+            <div class="input-icon">
+              <i class="fas fa-check-double"></i>
+            </div>
+            <div class="input-wrapper">
+              <input
+                type="password"
+                id="confirmPassword"
+                class="glass-input"
+                placeholder=" "
+                required
+              />
+              <label class="floating-label">Confirm Password</label>
+              <button
+                type="button"
+                class="eye-toggle"
+                data-target="confirmPassword"
+              >
+                <i class="fas fa-eye"></i>
+              </button>
+            </div>
+          </div>
+          <span class="error-msg" data-error="confirmPassword"></span>
+
+          <label class="glass-checkbox terms">
+            <input type="checkbox" id="agreeTerms" required />
+            <span class="checkbox-custom"></span>
+            <span class="checkbox-label">
+              I agree to the <a href="#" class="link-glass">Terms of Service</a>
+            </span>
+          </label>
+
+          <button type="submit" class="glass-submit">
+            <span class="submit-text">Create Account</span>
+            <span class="submit-loader"></span>
+            <i class="fas fa-arrow-right submit-icon"></i>
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Success Modal -->
+    <div class="success-modal" id="successModal">
+      <div class="success-glass">
+        <div class="success-check">
+          <i class="fas fa-check"></i>
+        </div>
+        <h2 id="successTitle">Success!</h2>
+        <p id="successMsg">Your action was completed successfully.</p>
+        <button class="success-close" id="closeSuccess">
+          Continue <i class="fas fa-arrow-right"></i>
+        </button>
+      </div>
+    </div>
+
+    <script src="/components/modal-auth/variant-2/script.js"></script>
+  </body>
+</html>

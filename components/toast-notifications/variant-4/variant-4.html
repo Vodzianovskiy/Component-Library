@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="/components/toast-notifications/img/v4.jpg"
+    />
+    <title>Neon Cyber Toast Notifications ⚡</title>
+    <link rel="stylesheet" href="variant-4.css" />
+  </head>
+  <body>
+    <!-- Back Button -->
+    <a href="../toast-notifications.html" class="back-button">
+      <svg
+        class="back-icon"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+      >
+        <path d="M19 12H5M12 19l-7-7 7-7" />
+      </svg>
+      <span>Back</span>
+    </a>
+
+    <!-- Cyber Grid Background -->
+    <div class="cyber-grid"></div>
+    <div class="cyber-glow"></div>
+
+    <div class="container">
+      <header class="header">
+        <h1 class="title">
+          <span class="glitch" data-text="⚡ Neon Cyber Toasts"
+            >⚡ Neon Cyber Toasts</span
+          >
+        </h1>
+        <p class="subtitle">Futuristic notifications with cyberpunk vibes</p>
+      </header>
+
+      <div class="demo-section">
+        <h2 class="section-title">[ LAUNCH NOTIFICATIONS ]</h2>
+
+        <div class="button-grid">
+          <button class="demo-btn success" data-type="success">
+            <span class="btn-border"></span>
+            <span class="btn-glow"></span>
+            <span class="btn-content">
+              <span class="btn-icon">◆</span>
+              <span>SUCCESS</span>
+            </span>
+          </button>
+
+          <button class="demo-btn error" data-type="error">
+            <span class="btn-border"></span>
+            <span class="btn-glow"></span>
+            <span class="btn-content">
+              <span class="btn-icon">✖</span>
+              <span>ERROR</span>
+            </span>
+          </button>
+
+          <button class="demo-btn warning" data-type="warning">
+            <span class="btn-border"></span>
+            <span class="btn-glow"></span>
+            <span class="btn-content">
+              <span class="btn-icon">▲</span>
+              <span>WARNING</span>
+            </span>
+          </button>
+
+          <button class="demo-btn info" data-type="info">
+            <span class="btn-border"></span>
+            <span class="btn-glow"></span>
+            <span class="btn-content">
+              <span class="btn-icon">●</span>
+              <span>INFO</span>
+            </span>
+          </button>
+        </div>
+
+        <div class="controls">
+          <button class="control-btn primary" id="showAll">
+            <span class="ctrl-glow"></span>
+            <span>[ SHOW ALL ]</span>
+          </button>
+          <button class="control-btn secondary" id="clearAll">
+            <span class="ctrl-glow"></span>
+            <span>[ CLEAR ALL ]</span>
+          </button>
+          <button class="control-btn tertiary" id="randomToast">
+            <span class="ctrl-glow"></span>
+            <span>[ RANDOM ]</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-value" id="totalToasts">0</div>
+          <div class="stat-label">TOTAL TOASTS</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value" id="activeToasts">0</div>
+          <div class="stat-label">ACTIVE NOW</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value">4</div>
+          <div class="stat-label">TYPES AVAILABLE</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Toast Container -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <script src="variant-4.js"></script>
+  </body>
+</html>

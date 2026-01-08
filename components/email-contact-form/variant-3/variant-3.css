@@ -1,0 +1,412 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Courier New", Courier, monospace;
+  background: #0a0e27;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Cyberpunk Grid Background */
+.cyberpunk-grid {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(
+      rgba(138, 43, 226, 0.1) 1px,
+      transparent 1px
+    ),
+    linear-gradient(90deg, rgba(138, 43, 226, 0.1) 1px, transparent 1px);
+  background-size: 50px 50px;
+  perspective: 1000px;
+  transform: rotateX(60deg);
+  transform-origin: center top;
+  z-index: 0;
+  animation: gridMove 20s linear infinite;
+}
+
+@keyframes gridMove {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 0 50px;
+  }
+}
+
+.container {
+  width: 100%;
+  max-width: 550px;
+  z-index: 1;
+  position: relative;
+}
+
+/* Neon Card */
+.neon-card {
+  background: rgba(10, 14, 39, 0.95);
+  border-radius: 20px;
+  padding: 45px 40px;
+  box-shadow: 0 0 40px rgba(138, 43, 226, 0.3), 0 0 80px rgba(0, 212, 255, 0.2),
+    inset 0 0 60px rgba(138, 43, 226, 0.05);
+  border: 2px solid rgba(138, 43, 226, 0.5);
+  position: relative;
+  animation: cardPulse 3s ease-in-out infinite;
+}
+
+@keyframes cardPulse {
+  0%,
+  100% {
+    box-shadow: 0 0 40px rgba(138, 43, 226, 0.3),
+      0 0 80px rgba(0, 212, 255, 0.2), inset 0 0 60px rgba(138, 43, 226, 0.05);
+  }
+  50% {
+    box-shadow: 0 0 50px rgba(138, 43, 226, 0.4),
+      0 0 100px rgba(0, 212, 255, 0.3), inset 0 0 80px rgba(138, 43, 226, 0.08);
+  }
+}
+
+/* Back Button */
+.back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #00d4ff;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 10px 16px;
+  border-radius: 8px;
+  background: rgba(0, 212, 255, 0.1);
+  border: 1px solid rgba(0, 212, 255, 0.3);
+  transition: all 0.3s ease;
+  margin-bottom: 24px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.back-btn:hover {
+  background: rgba(0, 212, 255, 0.2);
+  box-shadow: 0 0 20px rgba(0, 212, 255, 0.4);
+  transform: translateX(-5px);
+}
+
+/* Neon Icon */
+.icon-neon {
+  width: 90px;
+  height: 90px;
+  background: rgba(138, 43, 226, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 28px;
+  border: 2px solid #8a2be2;
+  box-shadow: 0 0 30px rgba(138, 43, 226, 0.5),
+    inset 0 0 20px rgba(138, 43, 226, 0.2);
+  animation: iconGlow 2s ease-in-out infinite;
+}
+
+.icon-neon svg {
+  stroke: #8a2be2;
+  filter: drop-shadow(0 0 10px #8a2be2);
+}
+
+@keyframes iconGlow {
+  0%,
+  100% {
+    box-shadow: 0 0 30px rgba(138, 43, 226, 0.5),
+      inset 0 0 20px rgba(138, 43, 226, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 50px rgba(138, 43, 226, 0.7),
+      inset 0 0 30px rgba(138, 43, 226, 0.3);
+  }
+}
+
+/* Glitch Title */
+.form-title {
+  font-size: 36px;
+  color: #fff;
+  margin-bottom: 10px;
+  font-weight: 900;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.glitch {
+  position: relative;
+  display: inline-block;
+  color: #00d4ff;
+  text-shadow: 0 0 10px #00d4ff, 0 0 20px #00d4ff, 0 0 40px #8a2be2;
+}
+
+.form-subtitle {
+  color: #8a8a8a;
+  margin-bottom: 40px;
+  font-size: 14px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.form-group {
+  margin-bottom: 28px;
+  position: relative;
+}
+
+label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 700;
+  color: #00d4ff;
+  margin-bottom: 10px;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+.label-icon {
+  color: #8a2be2;
+  font-size: 16px;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 14px 18px;
+  border: 2px solid rgba(138, 43, 226, 0.3);
+  border-radius: 10px;
+  font-size: 15px;
+  transition: all 0.3s ease;
+  font-family: "Courier New", Courier, monospace;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  position: relative;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: #8a2be2;
+  background: rgba(0, 0, 0, 0.7);
+  box-shadow: 0 0 20px rgba(138, 43, 226, 0.4),
+    inset 0 0 10px rgba(138, 43, 226, 0.1);
+}
+
+input.error,
+textarea.error {
+  border-color: #ff0055;
+  background: rgba(255, 0, 85, 0.1);
+  box-shadow: 0 0 15px rgba(255, 0, 85, 0.3);
+}
+
+input.success,
+textarea.success {
+  border-color: #00ff88;
+  background: rgba(0, 255, 136, 0.05);
+  box-shadow: 0 0 15px rgba(0, 255, 136, 0.2);
+}
+
+textarea {
+  resize: vertical;
+  min-height: 130px;
+}
+
+.input-border {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #8a2be2, #00d4ff);
+  transition: width 0.3s ease;
+}
+
+input:focus ~ .input-border,
+textarea:focus ~ .input-border {
+  width: 100%;
+}
+
+.error-message {
+  display: block;
+  color: #ff0055;
+  font-size: 12px;
+  margin-top: 8px;
+  min-height: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-shadow: 0 0 10px rgba(255, 0, 85, 0.5);
+}
+
+.char-counter {
+  position: absolute;
+  right: 0;
+  bottom: -22px;
+  font-size: 11px;
+  color: #8a8a8a;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 18px;
+  background: linear-gradient(135deg, #8a2be2 0%, #00d4ff 100%);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 900;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  box-shadow: 0 0 30px rgba(138, 43, 226, 0.5), 0 8px 20px rgba(0, 0, 0, 0.3);
+  font-family: "Courier New", Courier, monospace;
+}
+
+.submit-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
+  transition: left 0.5s;
+}
+
+.submit-btn:hover:not(:disabled) {
+  transform: translateY(-3px);
+  box-shadow: 0 0 50px rgba(138, 43, 226, 0.7), 0 0 100px rgba(0, 212, 255, 0.5),
+    0 12px 30px rgba(0, 0, 0, 0.4);
+}
+
+.submit-btn:hover:not(:disabled)::before {
+  left: 100%;
+}
+
+.submit-btn:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.submit-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.btn-bracket {
+  color: #00d4ff;
+  font-size: 20px;
+  margin: 0 4px;
+}
+
+.btn-loader {
+  display: none;
+  width: 22px;
+  height: 22px;
+  border: 3px solid rgba(255, 255, 255, 0.2);
+  border-top-color: #00d4ff;
+  border-radius: 50%;
+  animation: spin 0.6s linear infinite;
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@keyframes spin {
+  to {
+    transform: translateY(-50%) rotate(360deg);
+  }
+}
+
+.submit-btn.loading .btn-loader {
+  display: block;
+}
+
+.submit-btn.loading .btn-text {
+  opacity: 0.5;
+}
+
+.form-status {
+  margin-top: 24px;
+  padding: 16px;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 700;
+  text-align: center;
+  display: none;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+.form-status.success {
+  background: rgba(0, 255, 136, 0.15);
+  color: #00ff88;
+  border: 2px solid #00ff88;
+  box-shadow: 0 0 30px rgba(0, 255, 136, 0.3);
+  display: block;
+  animation: statusFade 0.4s ease;
+}
+
+.form-status.error {
+  background: rgba(255, 0, 85, 0.15);
+  color: #ff0055;
+  border: 2px solid #ff0055;
+  box-shadow: 0 0 30px rgba(255, 0, 85, 0.3);
+  display: block;
+  animation: statusFade 0.4s ease;
+}
+
+@keyframes statusFade {
+  from {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .neon-card {
+    padding: 36px 28px;
+  }
+
+  .form-title {
+    font-size: 28px;
+  }
+
+  .icon-neon {
+    width: 70px;
+    height: 70px;
+  }
+}

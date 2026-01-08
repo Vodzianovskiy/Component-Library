@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/img/logo.png" />
+    <title>Web Components Showcase | Frontend Developer Portfolio</title>
+    <link rel="stylesheet" href="/css/main/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="container">
+        <div class="nav-brand">
+          <i class="fas fa-code"></i>
+          <span>Component Library</span>
+        </div>
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#components">Components</a></li>
+          <li><a href="#tech">Tech Stack</a></li>
+          <li>
+            <a href="https://github.com/Vodzianovskiy" target="_blank">
+              <i class="fab fa-github"></i> GitHub
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <h1 class="glitch" data-text="Interactive Component Showcase">
+            Interactive Component Showcase
+          </h1>
+          <p class="hero-subtitle">
+            Professional, reusable web components built with clean HTML, CSS &
+            JavaScript
+          </p>
+          <div class="hero-badges">
+            <span class="badge">Responsive</span>
+            <span class="badge">Accessible</span>
+            <span class="badge">Modern</span>
+          </div>
+          <a href="#components" class="cta-button">
+            Explore Components <i class="fas fa-arrow-down"></i>
+          </a>
+        </div>
+      </div>
+      <div class="hero-decoration">
+        <div class="circle circle-1"></div>
+        <div class="circle circle-2"></div>
+        <div class="circle circle-3"></div>
+      </div>
+    </section>
+
+    <!-- Tech Stack Section -->
+    <section id="tech" class="tech-stack">
+      <div class="container">
+        <h2 class="section-title">Tech Stack</h2>
+        <div class="tech-grid">
+          <div class="tech-item">
+            <i class="fab fa-html5"></i>
+            <span>HTML5</span>
+          </div>
+          <div class="tech-item">
+            <i class="fab fa-css3-alt"></i>
+            <span>CSS3</span>
+          </div>
+          <div class="tech-item">
+            <i class="fab fa-js"></i>
+            <span>JavaScript</span>
+          </div>
+          <div class="tech-item">
+            <i class="fab fa-figma"></i>
+            <span>Figma</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Components Grid -->
+    <section id="components" class="components-section">
+      <div class="container">
+        <h2 class="section-title">Component Library</h2>
+        <p class="section-subtitle">
+          Click on any component to see it in action
+        </p>
+
+        <div class="components-grid">
+          <!-- Component Card 1 -->
+          <div class="component-card">
+            <div class="card-icon">
+              <i class="fas fa-user-lock"></i>
+            </div>
+            <h3>Authentication Modal</h3>
+            <p>
+              Login and signup forms with real-time validation and password
+              strength checker
+            </p>
+            <div class="card-tags">
+              <span class="tag">Forms</span>
+              <span class="tag">Validation</span>
+            </div>
+            <div class="card-actions">
+              <a
+                href="/components/modal-auth/modal-auth.html"
+                class="btn btn-primary"
+              >
+                <i class="fas fa-eye"></i> Live Demo
+              </a>
+            </div>
+          </div>
+
+          <!-- Component Card 2 -->
+          <div class="component-card">
+            <div class="card-icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <h3>Email Contact Form</h3>
+            <p>
+              Modern contact form with instant feedback and smooth animations
+            </p>
+            <div class="card-tags">
+              <span class="tag">AJAX</span>
+              <span class="tag">Animation</span>
+            </div>
+            <div class="card-actions">
+              <a
+                href="/components/email-contact-form/email-contact-form.html"
+                class="btn btn-primary"
+              >
+                <i class="fas fa-eye"></i> Live Demo
+              </a>
+            </div>
+          </div>
+
+          <!-- Component Card 3 -->
+          <div class="component-card">
+            <div class="card-icon">
+              <i class="fas fa-question-circle"></i>
+            </div>
+            <h3>FAQ Accordion</h3>
+            <p>
+              Collapsible Q&A section with search filter and keyboard support
+            </p>
+            <div class="card-tags">
+              <span class="tag">Interactive</span>
+              <span class="tag">A11y</span>
+            </div>
+            <div class="card-actions">
+              <a
+                href="/components/faq-accordion/faq-accordion.html"
+                class="btn btn-primary"
+              >
+                <i class="fas fa-eye"></i> Live Demo
+              </a>
+            </div>
+          </div>
+
+          <!-- Component Card 4 -->
+          <div class="component-card">
+            <div class="card-icon">
+              <i class="fas fa-bell"></i>
+            </div>
+            <h3>Toast Notifications</h3>
+            <p>
+              Smart popup alerts with auto-close and multiple notification
+              styles
+            </p>
+            <div class="card-tags">
+              <span class="tag">JavaScript</span>
+              <span class="tag">UX</span>
+            </div>
+            <div class="card-actions">
+              <a
+                href="/components/toast-notifications/toast-notifications.html"
+                class="btn btn-primary"
+              >
+                <i class="fas fa-eye"></i> Live Demo
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-left">
+            <p>
+              &copy; Ivan Vodzianovskij. Built with
+              <i class="fas fa-heart"></i> for Upwork
+            </p>
+          </div>
+          <div class="footer-links">
+            <a href="https://github.com/Vodzianovskiy" target="_blank">
+              <i class="fab fa-github"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="/js/main/main.js"></script>
+  </body>
+</html>

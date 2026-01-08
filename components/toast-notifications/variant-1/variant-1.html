@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="/components/toast-notifications/img/v1.jpg"
+    />
+    <title>Glassmorphism Toast Notifications ✨</title>
+    <link rel="stylesheet" href="variant-1.css" />
+  </head>
+  <body>
+    <!-- Back Button -->
+    <a href="../toast-notifications.html" class="back-button">
+      <svg
+        class="back-icon"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+      >
+        <path d="M19 12H5M12 19l-7-7 7-7" />
+      </svg>
+      <span>Back</span>
+    </a>
+
+    <div class="container">
+      <header class="header">
+        <h1 class="title">✨ Glassmorphism Toasts</h1>
+        <p class="subtitle">Frosted glass effect with elegant transparency</p>
+      </header>
+
+      <div class="demo-section">
+        <h2 class="section-title">Try Different Notifications</h2>
+
+        <div class="button-grid">
+          <button class="demo-btn success-btn" data-type="success">
+            <span class="btn-icon">✓</span>
+            <span>Success</span>
+          </button>
+
+          <button class="demo-btn error-btn" data-type="error">
+            <span class="btn-icon">✕</span>
+            <span>Error</span>
+          </button>
+
+          <button class="demo-btn warning-btn" data-type="warning">
+            <span class="btn-icon">⚠</span>
+            <span>Warning</span>
+          </button>
+
+          <button class="demo-btn info-btn" data-type="info">
+            <span class="btn-icon">ℹ</span>
+            <span>Info</span>
+          </button>
+        </div>
+
+        <div class="controls">
+          <button class="control-btn primary" id="showAll">
+            Show All Types
+          </button>
+          <button class="control-btn secondary" id="clearAll">Clear All</button>
+          <button class="control-btn tertiary" id="randomToast">
+            Random Toast
+          </button>
+        </div>
+      </div>
+
+      <div class="info-card">
+        <h3>Features ✨</h3>
+        <ul>
+          <li>Frosted glass blur effect</li>
+          <li>Smooth slide-in animations</li>
+          <li>Auto-dismiss after 5 seconds</li>
+          <li>Click to close manually</li>
+          <li>Stacks multiple notifications</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Toast Container -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <script src="variant-1.js"></script>
+  </body>
+</html>
